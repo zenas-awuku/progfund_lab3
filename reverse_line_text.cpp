@@ -15,15 +15,18 @@ int main()
     {
         // sentence[position] = c;
         ++position;
+
+        if (position == 256)
+            break;
     }
 
     cout << endl;
-    for (int i = 0; i < position ; i++) 
+    for (int i = 0; i < position; i++)
     {
-        reversed_sentence[i] = sentence[position-(1+i)];
+        reversed_sentence[i] = sentence[position - (1 + i)];
     }
 
-    for(auto i :reversed_sentence)
+    for (auto i : reversed_sentence)
         cout << i;
-    cout <<endl;
+    cout << endl;
 }
